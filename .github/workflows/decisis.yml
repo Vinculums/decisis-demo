@@ -17,7 +17,7 @@ jobs:
         with:
           fetch-depth: 0
           persist-credentials: false
-      - uses: Vinculums/decisis@412e004e63a98ea7bcb28fc908154f1605e701ff # v0.4.1
+      - uses: Vinculums/decisis@692e33f4456c4da5f8f5f5bb8786b7eaed015752 # v0.4.2
         with:
           init: true
           inventory: auto
