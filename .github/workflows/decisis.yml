@@ -1,0 +1,25 @@
+name: decisis
+on:
+  pull_request:
+permissions: {}
+concurrency:
+  group: decisis-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+jobs:
+  decisis:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pull-requests: write
+      security-events: write
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - uses: Vinculums/decisis@412e004e63a98ea7bcb28fc908154f1605e701ff # v0.4.1
+        with:
+          init: true
+          inventory: auto
+          sarif: true
+          fail-on-violation: true

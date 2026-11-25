@@ -1,0 +1,4 @@
+# Each line is a path and its owners; the last matching line applies.
+*                        @bookshop/platform
+/src/bookshop/payments/  @bookshop/payments
+/package-lock.json       @bookshop/platform
